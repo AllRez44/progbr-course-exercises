@@ -7,7 +7,7 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 ### Básico
 [General](HTML/basico/Dev/index.html)  
 [Challenge 1](HTML/basico/Challenge%201%20-%20HTML%20Basico/index.html)  
-[Challenge 1 2.0](HTML/basico/Challenge%201%20-%20HTML%20Basico%202.0/index.html)
+[Challenge 1 2.0](HTML/basico/Challenge%201%20-%20HTML%20Basico%202.0/index.html)  
 
 ### Intermediário  
 
@@ -20,8 +20,8 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 [Challenge 1 2.0](CSS/basico/Challenge%201%20-%20CSS%20Basico%202.0/index.html)  
 
 ### Intermediário
-[Responsiveness](CSS/intermediario/Responsividade/index.html)
+[Responsiveness](CSS/intermediario/Responsividade/index.html)  
 [Vertical & Horizontal Align](CSS/intermediario/alinhamento%20vertical/index.html)  
 [Float & Overflow](CSS/intermediario/float%20e%20overflow/index.html)  
 [Media Queries](CSS/intermediario/media%20queries/index.html)  
-[Canvas - Positions class](CSS/intermediario/quadro%20-%20aula%20de%20positions/quadro.html)
+[Canvas - Positions class](CSS/intermediario/quadro%20-%20aula%20de%20positions/quadro.html)  
