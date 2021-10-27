@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Alinhamento Vertical</title>
+    <style type="text/css">
+      .card {
+        position: relative;
+        float: left;
+        width: 250px;
+        height: 140px;
+        border: 2px solid darkgreen;
+        text-align: center;
+      }
+
+      #board1 {
+        background-color: red;
+      }
+
+      #board2 {
+        position: relative;
+        background-color: blue;
+        z-index: 2;
+      }
+
+      /* Método por Line-Height, Manual*/
+      #c1 {
+        position: relative;
+        line-height: 140px;
+        z-index: 2;
+      }
+
+      /* Método por Position e Transform */
+      #c2 {
+        background-color: purple;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .card2 {
+        float: left;
+        padding-left: 124px;
+        padding-right: 124px;
+        padding-top: 61px;
+        padding-bottom: 61px;
+        border: 2px solid darkgreen;
+      }
+
+      #line-center {
+        position: relative;
+        background-color: crimson;
+        border: 9px solid crimson;
+        margin-left: -800px;
+        overflow: visible;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="board1">
+      <div id="c1">Center</div>
+    </div>
+
+    <div class="card" id="board2">
+      <div id="c2">Center</div>
+    </div>
+    <div class="card2"><div id="line-center"></div></div>
+  </body>
+</html>

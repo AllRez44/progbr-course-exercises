@@ -1,0 +1,40 @@
+body{
+    background:black;
+    font-family: 'Courier Prime';
+}
+
+.b_card{
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    background-image: url(../assets/backgorund.png); 
+    background-size: cover;
+    padding-left: 20px;
+    padding-top: 1px;
+    list-style-position: inside;
+}
+
+#nome{
+    font-weight: 1;
+}
+
+.lilink{
+    margin-bottom: 6px;
+}
+
+#insta{
+    list-style-image: url(../assets/Insta.png);
+}
+
+#tt{
+    list-style-image: url(../assets/Twitter.png);
+}
+
+#ytb{
+    list-style-image: url(../assets/Youtube.png);
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}

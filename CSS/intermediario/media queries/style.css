@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: tomato;
+}
+
+header {
+  background-color: rgb(49, 44, 56);
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(112, 71, 179);
+  width: 90%;
+  padding: 15px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: large;
+  color: rgb(230, 243, 247);
+}
+
+.logo {
+  float: left;
+  cursor: pointer;
+  border: 2px dashed black;
+  padding: 0 1rem;
+}
+
+.menu {
+  float: right;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+li {
+  float: left;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    box-sizing: border-box;
+  }
+
+  .header {
+    background-color: olivedrab;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    float: none;
+    text-align: center;
+    margin: 0;
+  }
+
+  .menu {
+    margin-top: 3rem;
+    float: none;
+  }
+
+  li {
+    margin: 1rem 0 0;
+    padding: 10px;
+    display: flex;
+    float: none;
+    justify-content: center;
+    background-color: darkgreen;
+    border-radius: 0.8rem;
+  }
+  li:hover {
+    margin: 1rem 10px 0;
+    display: flex;
+    padding: 12px;
+    transition: ease-in-out;
+    transition: 0.2s;
+  }
+}
