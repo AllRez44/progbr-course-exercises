@@ -10,7 +10,8 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 [Challenge 1 2.0](HTML/basico/Challenge%201%20-%20HTML%20Basico%202.0/index.html)  
 
 ### Intermediário  
-[Form](HTML/intermediario/formulario/index.html)
+[Form 1 - Youtube Search](HTML/intermediario/formulario/formulary%201%20-%20form/index.html)
+[Form 2 - Formulary](HTML/intermediario/formulario/formulary%202%20-%20input/index.html)
 
 ---
 
