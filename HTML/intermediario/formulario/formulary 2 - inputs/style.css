@@ -1,0 +1,42 @@
+html,
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(180, 179, 179);
+}
+
+p {
+  display: inline-block;
+  width: 6rem;
+}
+
+main {
+  max-width: 40rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  margin-left: 0.6rem;
+  padding: 0 1rem 1rem;
+  max-width: 38rem;
+  border: 2px solid beige;
+}
+
+#name,
+#email,
+#user,
+#pwd {
+  width: 14rem;
+}
+
+#ddd {
+  width: 2.5rem;
+}
+
+#phone {
+  width: 8rem;
+}
