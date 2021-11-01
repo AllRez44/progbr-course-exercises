@@ -3,7 +3,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: rgb(180, 179, 179);
+  background-color: rgb(187, 173, 129);
 }
 
 p {
@@ -22,7 +22,7 @@ h2 {
 form {
   margin-left: 0.6rem;
   padding: 0 1rem 1rem;
-  max-width: 38rem;
+  max-width: 40rem;
   border: 2px solid beige;
 }
 
@@ -39,4 +39,9 @@ form {
 
 #phone {
   width: 8rem;
+}
+
+#uf {
+  margin-right: 1rem;
+  width: rem;
 }

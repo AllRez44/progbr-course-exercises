@@ -11,6 +11,7 @@
     <main>
       <h2>Formulário Básicão</h2>
       <form action="/survey/form" method="post">
+        <!--Input-->
         <p>Nome</p>
         <input type="text" name="nome" id="name" /> <br />
 
@@ -26,7 +27,7 @@
         <p>DDD</p>
         <input type="number" name="ddd" id="ddd" />
         <p style="width: 1.5rem; margin-left: 1rem">N°</p>
-        <input type="text" name="celular" id="phone" /> <br />
+        <input type="tel" name="celular" id="phone" /> <br />
 
         <input type="radio" name="genero" value="m" class="gender1" />
         <p>Masculino</p>
@@ -40,7 +41,23 @@
         <br />
 
         <p>Data de Nascimento</p>
-        <input type="date" name="nascimento" id="birth" /> <br />
+        <input type="date" name="nascimento" id="birth" />
+        <br />
+
+        <p>Foto de Perfil</p>
+        <input type="file" name="foto" />
+        <br />
+
+        <p>Nível de Satisfação</p>
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value="0"
+          name="satisfacao"
+          id="range"
+        />
+        <br />
 
         <p style="width: auto">Checkboxes - [Tinha esquecido de botar]</p>
         <input type="checkbox" name="option" id="check1" value="Test" /><input
@@ -52,8 +69,40 @@
           name="option"
           id="check4"
         />
+        <br />
+        <!--Select-->
+        UF
+        <select name="uf" id="uf">
+          <option value="rj">Rio de Janeiro</option>
+          <option value="sp">São Paulo</option>
+          <option value="mg">Minas Gerais</option>
+          <option value="ba">Bahia</option>
+          <option value="ce">Ceará</option>
+          <option value="pa">Pará</option>
+          <option value="am">Amazonas</option>
+          <option value="pr">Paraná</option>
+          <option value="" selected></option>
+        </select>
+        <p style="width: auto">Capital</p>
+        <select name="cidade" id="city" multiple size="5">
+          <option value="rio">Rio de Janeiro</option>
+          <option value="sao">São Paulo</option>
+          <option value="bh">Belo Horizonte</option>
+          <option value="sal">Salvador</option>
+          <option value="for">Fortaleza</option>
+          <option value="bel">Belém</option>
+          <option value="man">Manaus</option>
+          <option value="cur">Curitiba</option>
+          <option value="" selected></option>
+        </select>
+        <br />
+        <!--Textarea-->
+        <p style="display: block; width: auto">Comentários adicionais</p>
+        <textarea name="comentarios" id="coments" cols="30" rows="10">
+        </textarea>
 
         <br /><br />
+        <!--Input: Submit e Reset-->
         <input type="submit" value="Enviar" id="submit" />
         <br /><br /><br />
 
