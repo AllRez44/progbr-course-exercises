@@ -1,0 +1,118 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  background: url(images/people.jpg) no-repeat center/cover; /*Só funciona com background, NÃO com BACKGROUND-IMAGE*/
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  width: 100vw;
+  background-color: #48c5ce;
+  text-align: center;
+  color: white;
+}
+
+header * {
+  margin: 0;
+  padding: 0.625rem;
+}
+
+main {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 2rem 0;
+  min-height: 400px;
+  width: 100%;
+}
+
+form {
+  background-color: rgba(240, 240, 240, 0.666);
+  padding: 0rem 1.5rem 1.5rem;
+  width: 200px;
+  margin-right: 2rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0 0 0.5rem;
+  border: 0;
+  border-radius: 0;
+  text-indent: 0.5rem;
+}
+
+input {
+  color: gray;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(images/arrow.jpg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center; /* Eixo X => "calc(100% - 10px)" *ou seja, eixo x todo-10px ; Eixo Y => "center" */
+}
+
+form #submit {
+  color: white;
+  text-transform: uppercase;
+  text-indent: 0;
+  font-weight: 900;
+  background-color: #48c5ce;
+}
+
+.formTitle {
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 1.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+footer {
+  position: relative;
+  background-color: #1f2021;
+  padding: 1rem 0 2rem;
+  width: 100%;
+}
+
+.bottom {
+  margin: auto;
+  max-width: 40%;
+}
+
+#face {
+  width: 160px;
+  margin: 1rem 2rem 0;
+  float: left;
+}
+
+.description {
+  color: white;
+  min-width: none;
+  width: 550px;
+  padding-top: 3.5rem;
+  margin-top: 1rem;
+}
+
+.footerTitle {
+  text-transform: capitalize;
+}
+
+.description p {
+  font-size: 0.9rem;
+}
