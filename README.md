@@ -1,4 +1,6 @@
 #progbr-course-exercises  
+https://allrez44.github.io/progbr-course-exercises/
+
 Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.com/  
 
 -----

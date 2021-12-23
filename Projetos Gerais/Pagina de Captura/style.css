@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  width: 100vw;
   background: url(images/people.jpg) no-repeat center/cover; /*Só funciona com background, NÃO com BACKGROUND-IMAGE*/
+  background-color: #1f2021;
 }
 
 .container {
@@ -15,45 +15,36 @@ body {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   background-color: #48c5ce;
   text-align: center;
   color: white;
 }
 
-header * {
+h1 {
   margin: 0;
   padding: 0.625rem;
 }
 
 main {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  padding: 2rem 0;
-  min-height: 400px;
-  width: 100%;
+  padding: 2rem;
 }
 
 form {
-  background-color: rgba(240, 240, 240, 0.666);
-  padding: 0rem 1.5rem 1.5rem;
-  width: 200px;
-  margin-right: 2rem;
+  background-color: #ffffffbb;
+  padding: 1.5rem;
+  max-width: 230px;
+  float: right;
 }
 
 input,
 select {
   width: 100%;
-  padding: 0.5rem 0;
-  margin: 0 0 0.5rem;
-  border: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
   border-radius: 0;
-  text-indent: 0.5rem;
-}
-
-input {
-  color: gray;
 }
 
 select {
@@ -68,13 +59,13 @@ select {
 form #submit {
   color: white;
   text-transform: uppercase;
-  text-indent: 0;
   font-weight: 900;
   background-color: #48c5ce;
 }
 
 .formTitle {
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 .title {
@@ -88,31 +79,99 @@ footer {
   background-color: #1f2021;
   padding: 1rem 0 2rem;
   width: 100%;
-}
-
-.bottom {
-  margin: auto;
-  max-width: 40%;
+  text-align: center;
 }
 
 #face {
   width: 160px;
   margin: 1rem 2rem 0;
-  float: left;
 }
 
 .description {
+  display: inline-block;
   color: white;
   min-width: none;
-  width: 550px;
-  padding-top: 3.5rem;
-  margin-top: 1rem;
+  max-width: 25%;
+  text-align: left;
 }
 
 .footerTitle {
   text-transform: capitalize;
+  font-size: 1.5rem;
 }
 
 .description p {
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 759px) {
+  html,
+  body {
+    width: 100vw;
+    background-image: none;
+  }
+
+  header .title {
+    font-size: 1.4rem;
+  }
+
+  main {
+    background: url(images/people.jpg) center/cover;
+    padding: 2rem 1rem 4rem;
+  }
+
+  form p,
+  form input,
+  form select {
+    font-size: 1.1rem;
+  }
+
+  #face {
+    width: 180px;
+    border-radius: 8px;
+  }
+
+  .description {
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .footerTitle {
+    font-size: 2rem;
+  }
+
+  .description p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  header .title {
+    font-size: 2rem;
+  }
+
+  form {
+    max-width: 290px;
+  }
+
+  form .formTitle {
+    font-size: 1.4rem;
+  }
+
+  form p,
+  form input,
+  form select {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    max-width: 55%;
+  }
+
+  .description p {
+    font-size: 1.2rem;
+    text-align: left;
+  }
 }
