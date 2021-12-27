@@ -34,4 +34,4 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 
 ## JavaScript
 ### Básico
-[commands] (JavaScript/basico/commands/index.html)
+[Basic JS Commands](JavaScript/basico/commands/index.html)
