@@ -342,28 +342,11 @@ function schoolSystem() {
   alert(
     'À seguir, preencha os dados dos alunos corretamente. Ao final, será mostrado todo o registro.'
   )
-  var looper = prompt('Vamos começar?')
+  var looper = window.confirm('Vamos começar?')
   var media
   var result
   var novoAluno
   var alunosLista = ''
-
-  function loop() {
-    if (looper == 'sim' || looper == 's' || looper == 'ss') {
-      looper = true
-    } else if (
-      looper == 'não' ||
-      looper == 'nao' ||
-      looper == 'n' ||
-      looper == 'nn'
-    ) {
-      looper = false
-    } else {
-      alert('Não entendi. Tente novamente!')
-      looper = false
-    }
-  }
-  loop()
 
   alunos = new Array()
   var i = 0
@@ -391,8 +374,7 @@ function schoolSystem() {
     alunos[i] = aluno
     i += 1
 
-    looper = prompt('Quer Continuar?')
-    loop()
+    looper = window.confirm('Quer continuar?')
   }
 
   if (alunos.length > 0) {
