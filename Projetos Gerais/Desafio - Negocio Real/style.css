@@ -1,0 +1,493 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Header*/
+
+header {
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem 1.5rem;
+}
+
+.container * {
+  color: whitesmoke;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+#menuIcon,
+#menu {
+  display: none;
+}
+
+.socialMediaIcons {
+  gap: 1.5rem;
+}
+
+.centerShortcuts {
+  gap: 3rem;
+  padding: 0 2rem 0;
+  overflow: visible;
+}
+
+.contactShortcuts {
+  gap: 2rem;
+}
+
+.centerShortcuts a img {
+  max-width: 4rem;
+}
+
+.centerShortcuts *:hover,
+.contactShortcuts *:hover {
+  color: silver;
+}
+
+/*Main Content*/
+main p {
+  font-family: 'Meow Script', cursive;
+  font-size: 2rem;
+  font-weight: 000;
+}
+
+main {
+  max-width: 100vw;
+}
+
+main h1 {
+  font-size: 2.5rem;
+}
+
+.bigContainer {
+  position: relative;
+  place-items: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+.bigContainer > * {
+  padding-bottom: 3rem;
+}
+
+.cover {
+  position: relative;
+  background: url(./assets/images/woman-hairdresser-salon.jpg) center/cover;
+  width: 100%;
+  height: 900px;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverText {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+}
+
+.coverText * {
+  font-family: 'Dancing Script', cursive;
+}
+
+.brandName {
+  font-size: 8rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  padding-bottom: 2rem;
+}
+
+.brandSubtitle {
+  font-size: 3rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  color: gold;
+}
+
+.intro {
+  text-align: center;
+  align-items: center;
+  width: 100vw;
+  padding: 6rem 0 8rem;
+}
+
+.intro h1 {
+  padding-bottom: 6rem;
+}
+
+.intro p {
+  font-size: 2.5rem;
+  word-spacing: 0.5rem;
+}
+
+#gallery {
+  height: fit-content;
+  overflow: hidden;
+}
+
+.galleryItems {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  width: 100vw;
+  background-color: black;
+}
+
+.galleryItems img {
+  height: fit-content;
+  width: 25vw;
+}
+
+#testimonials h2 {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.testimonialsList {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  text-align: center;
+  margin: 0 0.6rem 0;
+  gap: 1rem;
+}
+
+.testimonialsList li {
+  margin-bottom: 2rem;
+}
+
+.testimonialsList li strong {
+  font-size: 1.4rem;
+  color: rgb(58, 58, 58);
+}
+
+.ratingStars {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.ratingText {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  color: rgb(151, 151, 151);
+}
+
+#services {
+  background: whitesmoke;
+}
+
+#services h1 {
+  margin: 2rem 0 2rem;
+}
+
+.servicesList li p {
+  margin-top: 1rem;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(2, 11fr);
+  gap: 1.5rem;
+  padding: 0 2rem 0;
+}
+
+.servicesList strong {
+  font-size: 1.5rem;
+}
+
+.servicesList p {
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-style: italic;
+  color: rgb(58, 58, 58);
+}
+
+.fillHole {
+  visibility: hidden;
+}
+
+.slogan {
+  display: flex;
+  background-color: #080808;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sloganText {
+  font-size: 5.5rem;
+  color: aliceblue;
+}
+
+/* Bottom*/
+
+footer {
+  background-color: black;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4rem 0 10rem;
+  color: whitesmoke;
+  text-align: center;
+  gap: 2rem;
+}
+
+.bottom div *,
+.bottom div div * {
+  margin-bottom: 1rem;
+}
+
+.adressContact {
+  padding: 0 1rem 0;
+}
+
+#contact p {
+  margin-bottom: 0.1rem;
+}
+
+footer img {
+  max-width: 90%;
+  height: fit-content;
+  overflow: visible;
+}
+
+.credits h4 {
+  color: whitesmoke;
+  text-align: center;
+}
+.credits {
+  color: white;
+}
+
+.credits a {
+  color: silver;
+}
+
+/* Phone Media Query */
+
+@media screen and (max-width: 480px) {
+  /* Phone Header*/
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem 1.5rem;
+  }
+
+  .container * {
+    color: whitesmoke;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    width: 1.75rem;
+  }
+
+  header .socialMediaIcons .icon {
+    display: none;
+  }
+
+  header #menuIcon {
+    display: inline-block;
+    width: 1.9rem;
+  }
+
+  .socialMediaIcons {
+    gap: 0rem;
+  }
+
+  .centerShortcuts {
+    gap: 1.5rem;
+  }
+
+  .contactShortcuts {
+    gap: 1rem;
+  }
+
+  .centerShortcuts a img {
+    max-width: 3rem;
+  }
+
+  /* Phone Main */
+
+  .cover {
+    background: url(./assets/images/woman-hairdresser-salon-mobile.jpg)
+      center/cover;
+    height: 800px;
+    overflow: visible;
+  }
+
+  .coverText {
+    width: 80%;
+    left: 45%;
+    overflow: visible;
+  }
+
+  .brandName {
+    font-size: 4.1rem;
+    margin-left: 30%;
+    overflow: visible;
+  }
+
+  .brandSubtitle {
+    font-size: 2.8rem;
+  }
+
+  #menu {
+    display: inline-block;
+    background-color: black;
+    padding: 6rem 0rem 4rem;
+    width: 100vw;
+  }
+
+  #menu .shortcuts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem 6rem;
+    gap: 2rem;
+  }
+
+  #menu a {
+    font-size: 1.5rem;
+    color: white;
+    overflow: visible;
+    text-align: left;
+  }
+
+  #menu .socialMediaIcons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0;
+  }
+
+  #menu .socialMediaIcons .icon {
+    width: 2.3rem;
+  }
+
+  .intro p {
+    font-size: 2.3rem;
+    word-spacing: 0.25rem;
+  }
+
+  .galleryItems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    background-color: black;
+  }
+
+  .galleryItems img {
+    width: 50vw;
+  }
+
+  .servicesList {
+    gap: 0.75rem;
+    padding: 0 0.5rem 0;
+  }
+
+  .servicesList strong {
+    font-size: 1.25rem;
+  }
+
+  .listAligner {
+    font-size: 1.15rem !important;
+  }
+
+  .servicesList li p {
+    font-size: 1rem;
+  }
+
+  .slogan {
+    height: 450px;
+  }
+
+  .sloganText {
+    font-size: 3rem;
+    text-align: center;
+    color: aliceblue;
+  }
+
+  /* Phone Footer */
+  .bottom {
+    grid-template-columns: repeat(1, 3fr);
+    padding: 1rem 0 15rem;
+    gap: 2rem;
+  }
+
+  .bottom h2 {
+    font-size: 2rem;
+  }
+
+  .bottom p {
+    font-size: 1.25rem;
+  }
+
+  .bottom div *,
+  .bottom div div * {
+    margin-bottom: 0rem;
+  }
+
+  .bottom h2,
+  .bottom div h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  #adress {
+    padding-top: 5rem;
+  }
+
+  #contact {
+    padding: 5rem 0 5rem;
+  }
+
+  #contact p {
+    margin-bottom: 0.3rem;
+  }
+
+  #hours {
+    padding-top: 5rem;
+  }
+
+  #hours p {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
