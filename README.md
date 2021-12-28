@@ -4,7 +4,7 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 -----
 
 ## Projetos Gerais
-[Basic Landing Page](Projetos%20Gerais/Pagina%20de%20Captura/index.html)
+[Basic Landing Page](Projetos%20Gerais/Pagina%20de%20Captura/index.html)  
 [Real Business Basic Web Site](Projetos%20Gerais/Desafio%20-%20Negocio%20Real/index.html)
 
 -----
