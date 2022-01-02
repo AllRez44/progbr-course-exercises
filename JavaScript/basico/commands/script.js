@@ -347,7 +347,7 @@ function schoolSystem() {
   var result
   var novoAluno
   var alunosLista = ''
-
+  aluno = new Object()
   alunos = new Array()
   var i = 0
 
@@ -361,7 +361,7 @@ function schoolSystem() {
         result = 'REPROVOU!'
       } else result = 'Houve um erro!'
 
-      aluno = new Array(nome, n1, n2, media, result)
+      aluno = { nome, n1, n2, media, result }
       return aluno
     }
 
@@ -379,17 +379,23 @@ function schoolSystem() {
 
   if (alunos.length > 0) {
     for (i of alunos) {
+      //cada i de alunos é a var 'aluno', a qual é um OBJETO com nome, n1, n2, media e result
       alunosLista +=
-        i[0] +
+        i.nome +
+        //Nome do aluno na posição [i] do array alunos
         ' - ' +
-        i[1] +
+        i.n1 +
+        //Nota 1 do aluno na posição [i] do array alunos
         ' - ' +
-        i[2] +
+        i.n2 +
+        //Nota 2 do aluno na posição [i] do array alunos
         ' - ' +
         'M: ' +
-        i[3] +
+        i.media +
+        //Média do aluno na posição [i] do array alunos
         ' - ' +
-        i[4] +
+        i.result +
+        //Resultado do aluno na posição [i] do array alunos
         '\n' +
         '\n'
     }
@@ -405,7 +411,16 @@ function schoolSystem() {
         ' RESULTADO' +
         '\n' +
         '\n' +
-        alunosLista
+        alunosLista //lista já completa com todos os alunos do array 'alunos'
     )
   }
+}
+
+//Objects
+function objectTest() {
+  object = { val1: 1, val2: '2', val3: ['Pedro', 'Thiago'] }
+
+  var varProp = prompt('Digite o nome da 4ª Propriedade do Objeto')
+  object[varProp] = 'Allan'
+  console.log(object)
 }
