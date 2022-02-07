@@ -1,0 +1,3 @@
+document(){
+  alert(document)
+}

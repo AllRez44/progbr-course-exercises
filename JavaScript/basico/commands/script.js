@@ -25,6 +25,7 @@ var e = '1'
 // Módulo (Resto da Div): " % "
 // Incrementação: ++
 // Decrementação: --
+
 console.log('Exemplos de Atribuição')
 
 var f = 0
@@ -41,13 +42,15 @@ console.log(h)
 /*
 + Atribuições
 
-" var a++ " é igual a " var a += 1" 
-" var a-- " é igual a " var a -= 1" 
-" var a = a * 2 " é igual a " var a *= 2" 
-" var a = a / 3 " é igual a " var a /= 3" 
-" var a = a * 2 " é igual a " var a *= 2" 
-" var a = a % 2 " é igual a " var a %= 2" 
+" var a++   " ou " var a += 1" 
+" var a--   " ou " var a -= 1" 
+" var a *= 2" ou " var a = a * 2 "  
+" var a /= 3" ou " var a = a / 3 "  
+" var a %= 2" ou " var a = a % 2 "  
+" var a **= 2" ou " var a = a ** 2 "  
+
 */
+
 console.log('Exemplos de Atribuição, Método 2')
 
 var i = 2
@@ -120,6 +123,7 @@ PROMPT: O método prompt () exibe uma caixa de diálogo que solicita um valor pa
 *O prompt retorna uma string automaticamente
 
 */
+
 function promptTest() {
   var nome = prompt('Qual é o seu nome, mano?')
   alert('Ok, mano, vou te chamar de mano')
@@ -157,7 +161,7 @@ function ifElseTest() {
   } else if (m >= 18) {
     alert('Você pode, então: \n' + m1 + '\n' + m2)
   } else if (m >= 16) {
-    alert('Você então pode, apenas: \n' + m1)
+    alert('Você pode, então, apenas: \n' + m1)
   } else if (m < 16) {
     alert('Muito jovem, espere alguns anos')
   } else {
@@ -256,7 +260,7 @@ function switchTest() {
       )
       break
 
-    case 'Ruim':
+    case 'Ruim!':
       alert(
         'Está levemente abaixo da média. Provavelmente estudou pouco ou não se dedicou bem para tentar outras estratégias, recomendação quase obrigatória de tentar novamente no próximo ano'
       )
@@ -282,8 +286,8 @@ function forWhileTest() {
   }
   console.log('Inicializado ')
 
-  for (var i = 10; i > q; i--) {
-    console.log('Otimizando... ' + i)
+  for (q; q < 20; q++) {
+    console.log('Otimizando... ' + q)
   }
 }
 
@@ -418,9 +422,269 @@ function schoolSystem() {
 
 //Objects
 function objectTest() {
-  object = { val1: 1, val2: '2', val3: ['Pedro', 'Thiago'] }
+  function objectChangeProprietyName() {
+    console.log(
+      'Teste de Mudança de Nome de uma Propriedade dentro de um Objeto'
+    )
+    object = { val1: 1, val2: '2', val3: ['Pedro', 'Thiago'] }
 
-  var varProp = prompt('Digite o nome da 4ª Propriedade do Objeto')
-  object[varProp] = 'Allan'
-  console.log(object)
+    var varProp = prompt('Digite o nome da 4ª Propriedade do Objeto')
+    object[varProp] = 'Allan'
+    console.log(object)
+  }
+  objectChangeProprietyName()
+}
+function objectTest1() {
+  console.log('Teste de Objeto 1: ')
+
+  var alun = {
+    name: 'Adalberto',
+    grades: [5.5, 6.75],
+    media: function () {
+      return (this.grades[0] + this.grades[1]) / 2
+    }
+  }
+  console.log(
+    '-',
+    alun.name,
+    '-',
+    'n1:',
+    alun.grades[0],
+    'n2:',
+    alun.grades[1],
+    'média:',
+    alun.media()
+  )
+}
+
+objectTest1()
+
+function objectTest2() {
+  console.log('Teste de Objeto 2: ')
+
+  function calcMedia() {
+    return (this.grades[0] + this.grades[1]) / 2
+  }
+  var alun1 = {
+    name: 'Fernando',
+    grades: [1.5, 5.8],
+    media: calcMedia
+  }
+  var alun2 = {
+    name: 'Márcia',
+    grades: [4, 7.5],
+    media: calcMedia
+  }
+  console.log(
+    '-',
+    alun1.name,
+    '- n1:',
+    alun1.grades[0],
+    'n2:',
+    alun1.grades[1],
+    'média:',
+    alun1.media()
+  )
+  console.log(
+    alun2.name,
+    '- n1:',
+    alun2.grades[0],
+    'n2:',
+    alun2.grades[1],
+    'média:',
+    alun2.media()
+  )
+}
+objectTest2()
+//Teste de "This" - Objeto
+console.log('Teste de "This" em um Objeto:')
+function thisTest() {
+  var frase = {
+    sujeito: 'Pedro e Paulo ',
+    vL: 'são ',
+    pS: 'Idiotas',
+    oracao: function () {
+      return this.sujeito + this.vL + this.pS
+    }
+  }
+  console.log('-', frase.oracao())
+}
+thisTest()
+
+console.log('Teste de INSTANCIAR um objeto com uma Função')
+function instanceTest() {
+  function aluno(name, n1, n2) {
+    return {
+      nome: name,
+      nota1: n1,
+      nota2: n2,
+      media: () => {
+        return (n1 + n2) / 2
+      }
+    }
+    //Esse jeito criar um OBJETO no Retorno de uma Função chama-se INSTANCIAR um objeto
+  }
+  var a = aluno('Klaus', 6, 4.5)
+  var a1 = aluno('Paulo', 6.4, 7.8)
+  console.log(a)
+  console.log('média:', a.media())
+  console.log(a1)
+  console.log('média:', a1.media())
+}
+instanceTest()
+
+console.log('Teste de CONSTRUTOR de objeto')
+function constructorTest() {
+  function aluno(name, n1, n2) {
+    this.nome = name
+    this.nota1 = n1
+    this.nota2 = n2
+    this.media = () => {
+      return (n1 + n2) / 2
+    }
+  }
+  //essa Função cria um OBETO com propriedades "nome","nota1","nota2" e "media"
+  var a = new aluno('João', 10, 8.5)
+  var a1 = new aluno('Pedro', 8, 5.5)
+  //com o "new", foi criado um novo OBJETO usando a função "aluno"
+  console.log(a)
+  console.log('média:', a.media())
+  console.log(a1)
+  console.log('média:', a1.media())
+}
+constructorTest()
+//esse jeito de criar um OBJETO através de uma FUNÇÃO é chamado de CONSTRUTOR de um objeto
+
+// ------------------------------------------------------------------
+
+console.log('Testes de Datas')
+
+function dateTest() {
+  console.log('-Data criada em Ordem Decrescente:')
+  var d = new Date(2002, 08, 18, 02, 48)
+  // Ordem: Ano, Mês, Dia, Hora, Minutos, Segundos, Milisegundos
+  //O Mês corresponde a um array dos meses, então começa do 0 (Janeiro) e vai até 11 (Dezembro)
+  console.log(d)
+
+  console.log('-Data criada em Milisegudos')
+  //A Contagem é a partir de 31/12/1969 às 21:00:00 (No MS Edge)
+  var d1 = new Date(86400000)
+  console.log(d1)
+  //1000 * 60 * 60 * 24 => 24h após 31 de Dezembro de 1969, 21:00.
+
+  console.log('-Data criada em String (Formato Americano por extenso)')
+  //Month Day Year xx:yy(hours:mins)
+  var d2 = new Date('jun 12 1986 00:32')
+  console.log(d2)
+  console.log(
+    '-Data criada em String (Formato Americano numérico com Barras "/"'
+  )
+  // xx/yy/zz(month/day/year)
+  var d3 = new Date('07/13/2003 15:46')
+  console.log(d3)
+
+  console.log(
+    '-Data criada em String (Formato Americano numérico com Traços "-"'
+  )
+  // xx-yy-zz(month-day-year)
+  var d4 = new Date('12/22/2002 3:21')
+  console.log(d4)
+}
+dateTest()
+
+function dateCurrentTest() {
+  var d = new Date()
+  //"new Date()" com nada no parentesis retorna a Data ATUAL
+  var weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
+  var months = [
+    'Jan',
+    'Fev',
+    'Mar',
+    'Abril',
+    'Maio',
+    'Jun',
+    'Jul',
+    'Ago',
+    'Out',
+    'Nov',
+    'Dez'
+  ]
+  var weekDay = weekDays[d.getDay()]
+  var day = d.getDate()
+  var month = months[d.getMonth()]
+  var year = d.getFullYear()
+  if (d.getMinutes() < 10) {
+    var time = d.getHours() + ':' + '0' + d.getMinutes()
+  } else var time = d.getHours() + ':' + d.getMinutes()
+
+  alert(weekDay + ', ' + day + ' de ' + month + ' de ' + year + ' - ' + time)
+}
+
+function dateMilisecsTest() {
+  var d = new Date(
+    parseInt(prompt('Insira um número de ~12 Dígitos para Gerar uma Data'))
+  )
+  alert('A data é: ' + d)
+}
+
+/*Pull Date Infos
+  getDate()	 -  Returns the day of the month (from 1-31)
+  getDay() 	-  Returns the day of the week (from 0-6)
+  getFullYear()  -  Returns the year
+  getHours() 	-  Returns the hour (from 0-23)
+  getMilliseconds()	 -  Returns the milliseconds (from 0-999)
+  getMinutes() 	-  Returns the minutes (from 0-59)
+  getMonth() 	-  Returns the month (from 0-11)
+  getSeconds()	 -  Returns the seconds (from 0-59)
+  getTime()	 -  Returns the number of milliseconds since midnight Jan 1 1970, and a specified date
+  getTimezoneOffset()	 -  Returns the time difference between UTC time and local time, in minutes
+*/
+
+//Others:
+//now()	 -  Returns the number of milliseconds since midnight Jan 1, 1970
+
+//parse()	 -  Parses a date string and returns the number of milliseconds since January 1, 1970
+
+//valueOf()	 -  Returns the primitive value of a Date object
+
+/*  Modify Date Values
+  setDate()	 -  Sets the day of the month of a date object
+  setFullYear()  -  Sets the year of a date object
+  setHours()	 -  Sets the hour of a date object
+  setMilliseconds()	 -  Sets the milliseconds of a date object
+  setMinutes()	 -  Set the minutes of a date object
+  setMonth()	 -  Sets the month of a date object
+  setSeconds()	 -  Sets the seconds of a date object
+  setTime()	 -  Sets a date to a specified number of milliseconds after/before January 1, 1970
+*/
+
+console.log('Teste de Variáveis do tipo "const" e "let"')
+
+function constLetTest() {
+  var aVar = 1
+  let aLet = true
+  const aConst = [0]
+
+  aVar *= 10
+
+  if (aLet) {
+    aLet = false
+  }
+  //Altera o valor da variável do tipo "Let" para FALSE
+
+  for (let i = 1; aConst.length < 5; i++) {
+    aConst.push(i)
+  }
+  //valor da Const foi modificado, mas sem reatribuição. Apenas foram adicionados mais elementos ao Array
+
+  console.log(aVar)
+  console.log(aLet)
+  console.log(aConst)
+}
+constLetTest()
+
+function changeConstTest() {
+  const aConst = [10]
+  aConst[0] = prompt('o Atual valor do Index 0 da Constante é', aConst[0])
+  alert('Agora o valor do Index 0 da Const é ' + aConst[0])
 }
