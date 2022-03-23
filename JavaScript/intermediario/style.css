@@ -1,10 +1,46 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 button {
   display: flex;
   position: relative;
-  background-color: whitesmoke;
-  color: darkblue;
-  width: 8rem;
-  height: 3rem;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
+  width: 350px;
+  height: 60px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+}
+
+.bigContainer {
+  padding: 1.5rem 0.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#tempEventElement {
+  display: none;
+  flex-direction: column;
+  width: 300px;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem 2rem;
+  color: darkcyan;
+  border: 0.5px solid;
+  border-radius: 0.25rem;
+}
+
+input {
+  padding: 0.5rem;
 }

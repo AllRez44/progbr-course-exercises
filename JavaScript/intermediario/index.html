@@ -8,10 +8,28 @@
     <title>JS Intermediário</title>
   </head>
   <body>
-    <button onclick="document()">
-      <p>Teste de Document</p>
-    </button>
+    <div class="bigContainer">
+      <button onclick="showDocument()">
+        <p>Teste de Document</p>
+      </button>
 
-    <script src="script.js"></script>
+      <button id="eventTestButton" onclick="dropHideEventTest()">
+        <p>Teste de Eventos</p>
+      </button>
+
+      <div id="tempEventElement">
+        <h2>Texto Editável pelo input abaixo</h2>
+        <input
+          type="text"
+          placeholder="Escreva para alterar o h2 acima"
+          onchange="titleAlter(this)"
+        />
+      </div>
+
+      <button>
+        <p></p>
+      </button>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
