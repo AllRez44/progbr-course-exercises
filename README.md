@@ -29,17 +29,17 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 
 ### Básico
 
-[General](CSS/basico/Dev%202/index.html)  
-[Challenge 1](CSS/basico/Challenge%201%20-%20CSS%20Basico/index.html)  
-[Challenge 1 2.0](CSS/basico/Challenge%201%20-%20CSS%20Basico%202.0/index.html)
+[General](https://allrez44.github.io/progbr-course-exercises/CSS/basico/Dev%202/index.html)  
+[Challenge 1](https://allrez44.github.io/progbr-course-exercises/CSS/basico/Challenge%201%20-%20CSS%20Basico/index.html)  
+[Challenge 1 2.0](https://allrez44.github.io/progbr-course-exercises/CSS/basico/Challenge%201%20-%20CSS%20Basico%202.0/index.html)
 
 ### Intermediário
 
-[Responsiveness](CSS/intermediario/Responsividade/index.html)  
-[Vertical & Horizontal Align](CSS/intermediario/alinhamento%20vertical/index.html)  
-[Float & Overflow](CSS/intermediario/float%20e%20overflow/index.html)  
-[Media Queries](CSS/intermediario/media%20queries/index.html)  
-[Canvas - Positions class](CSS/intermediario/quadro%20-%20aula%20de%20positions/quadro.html)
+[Responsiveness](https://allrez44.github.io/progbr-course-exercises/CSS/intermediario/Responsividade/index.html)  
+[Vertical & Horizontal Align](https://allrez44.github.io/progbr-course-exercises/CSS/intermediario/alinhamento%20vertical/index.html)  
+[Float & Overflow](https://allrez44.github.io/progbr-course-exercises/CSS/intermediario/float%20e%20overflow/index.html)  
+[Media Queries](https://allrez44.github.io/progbr-course-exercises/CSS/intermediario/media%20queries/index.html)  
+[Canvas - Positions class](https://allrez44.github.io/progbr-course-exercises/CSS/intermediario/quadro%20-%20aula%20de%20positions/quadro.html)
 
 ---
 
@@ -47,8 +47,8 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 
 ### Básico
 
-[Console, Variables & Their Data Types, Math Ops., Atributions, Strings Ops., Parse, Alert, Prompt, Conditionals: If & Else, Ternary and Switch, Loops: For & While, Array, Functions, Objects, Proprieties, Methods, Constructors, Dates, Other Variables (Const & Let)](JavaScript/basico/commands/index.html)
+[Console, Variables & Their Data Types, Math Ops., Atributions, Strings Ops., Parse, Alert, Prompt, Conditionals: If & Else, Ternary and Switch, Loops: For & While, Array, Functions, Objects, Proprieties, Methods, Constructors, Dates, Other Variables (Const & Let)](https://allrez44.github.io/progbr-course-exercises/JavaScript/basico/commands/index.html)
 
 ### Intermediário
 
-[Window, Document, DOM, Events, This, Element: Parent, Children and Siblings, Math, JSON, Local Storage, Timeout & Interval ](JavaScript/intermediario/index.html)
+[Window, Document, DOM, Events, This, Element: Parent, Children and Siblings, Math, JSON, Local Storage, Timeout & Interval ](https://allrez44.github.io/progbr-course-exercises/JavaScript/intermediario/index.html)
