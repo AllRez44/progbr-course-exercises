@@ -5,6 +5,14 @@ body {
   padding: 0;
 }
 
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 button {
   display: flex;
   position: relative;
@@ -30,17 +38,116 @@ button {
   gap: 2rem;
 }
 
-#tempEventElement {
-  display: none;
+.tempEventElement {
   flex-direction: column;
   width: 300px;
   gap: 1.25rem;
-  padding: 1rem 1.5rem 2rem;
+  padding: 1.5rem 0.5rem 1.5rem;
   color: darkcyan;
   border: 0.5px solid;
   border-radius: 0.25rem;
+  align-items: center;
+  text-align: center;
+}
+
+.horizontalBox {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.h1 {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.h1 h2 {
+  font-size: 1.15rem;
+  color: aqua;
+  padding-top: 1.5rem;
+}
+
+.h1 h3 {
+  font-size: 1.05rem;
+  color: aquamarine;
+}
+
+.mathBox * {
+  cursor: pointer;
+  font-weight: 700;
 }
 
 input {
   padding: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.subButton {
+  padding: 0.75rem 0.85rem;
+  color: aliceblue;
+  font-size: 0.75rem;
+  width: auto;
+  height: auto;
+}
+
+#startGiveAwayButton {
+  background-color: rgba(105, 6, 197, 0.781);
+}
+
+#clearNames {
+  background-color: rgba(255, 8, 8, 0.932);
+  padding: 0rem 1rem;
+  border-radius: 50%;
+  color: rgb(204, 194, 194);
+}
+
+.timerStopWatch {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem 4rem 1rem 3rem;
+}
+
+.timerBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.timerBox h3 {
+  color: rgb(32, 48, 48);
+}
+
+.timeInput {
+  width: 2.5rem;
+  align-self: flex-end;
+  background-color: rgb(172, 204, 193);
+  border-radius: 0.5rem;
+}
+
+#stopWatchInput {
+  visibility: hidden;
+}
+
+.start,
+.stop {
+  padding: 0.4rem 0.75rem;
+  color: black;
+  border-width: 1px;
+}
+
+.start {
+  background-color: rgba(70, 139, 204, 0.767);
+  color: rgb(255, 245, 245);
+}
+
+.stop {
+  background-color: rgb(253, 32, 32);
+  color: rgb(245, 245, 245);
 }

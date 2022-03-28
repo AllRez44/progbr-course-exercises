@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="style.css" />
     <title>JS Intermediário</title>
   </head>
-  <body>
+  <body onload="loaded()">
     <div class="bigContainer">
       <button onclick="showDocument()">
         <p>Teste de Document</p>
       </button>
 
-      <button id="eventTestButton" onclick="dropHideEventTest()">
-        <p>Teste de Eventos</p>
+      <button id="eventTestButton" onclick="dropHideEvent(0)">
+        <p>Title Alter com OnChange</p>
       </button>
 
-      <div id="tempEventElement">
+      <div class="tempEventElement">
         <h2>Texto Editável pelo input abaixo</h2>
         <input
           type="text"
@@ -26,10 +26,116 @@
         />
       </div>
 
-      <button>
-        <p></p>
+      <button id="MouseTestButton" onclick="dropHideEvent(1)">
+        <p>Eventos de Mouse</p>
       </button>
+      
+      <div class="tempEventElement">
+        <p class="mouseTestText">MouseOver e MouseOut Test</p>
     </div>
+
+    <button id="thisButton" onclick="dropHideEvent(2)">
+      <p>Eventos com This </p>
+    </button>
+
+    <div class="tempEventElement">
+      <h2 id="thisH2">Clique Para Ficar itálico</h2>
+      <h3 id="thisH3">Clique Para Ficar itálico</h3>
+      <h4 id="thisH4">Clique Para Ficar itálico</h4>
+    </div>
+
+    <button id="parentChildSibling" onclick="dropHideEvent(3)">
+      <p>Eventos com Parent, Children e Sibling </p>
+    </button>
+
+    <div id="parentBox" class="tempEventElement horizontalBox">
+      <div class="h1" id="first"> H1 Parent</div>
+      <div class="h1" id="second">H1 Sibling</div>
+      <div class="h1" id="third">
+        H1 children
+          <div id="child1">
+            <h2>child 1</h2> 
+          </div>
+          <div id="child2">
+            <h3>child 2</h3>
+          </div>
+      </div>
+    </div>
+
+      <button id="math" onclick="dropHideEvent(4)">
+        <p>Math Box</p>
+      </button>
+
+      <div class="tempEventElement mathBox">
+        <div id="pi"> Valor de Pi: </div>
+        <div id="e"> Valor de e: </div>
+        <div id="random"> Valor randômico: </div>
+        <div id="randomRound">Valor randômico arredondado: </div>
+        <div id="exponenciacao">Exponenciação de: </div>
+      </div>
+
+      <button id="json" onclick="json()">
+        <p>JSON Test</p>
+      </button>
+
+      <button id="inputLocalStorage" onclick="dropHideEvent(5)">
+        <p>Local Storage Input</p>
+      </button>
+
+      <div class="tempEventElement inputLocalStorage">
+        <h1 id="h1InputLS"></h1>
+        <input type="text" oninput="update(this)">
+      </div>
+
+      <button id="giveAway" onclick="dropHideEvent(6)">
+        <p>Sorteio</p>
+      </button>
+
+      <div class="tempEventElement giveAway" >
+        <h2>Grande Sorteio!!!</h2>
+        <input type="text" name="giveAway" id="giveAwayNames" placeholder="Insira os nomes dos participantes" onchange="saveName(this.value)">
+        
+        <div class="buttons">
+          <button id="startGiveAwayButton" class="subButton" onclick="startGiveAway()"> 
+            <p>Iniciar Sorteio</p>
+          </button>
+  
+          <button id="clearNames" class="subButton" onclick="clearGiveAway()">  X </button>
+        </div>
+       
+      </div>
+
+      <button id="timerBtn" onclick="dropHideEvent(7)">
+        <p>Timer</p>
+      </button>
+
+      <div class="tempEventElement timerStopWatch">
+        <div class="timerBox" id="timer">
+          <h2>Timer</h2>
+          <h3 id="timerTitle">0 s</h3>
+
+          <input type="number" id="timerInput" class="timeInput" onchange="preTimeTimer()">
+
+          <div class="buttons">
+            <button class="subButton start" onclick="startTimer()"><p>Start</p></button>
+            <button class="subButton stop" onclick="stopTimer()"><p>Stop</p></button>
+          </div>
+        </div>
+
+        <div class="timerBox" id="stopWatch">
+          <h2>Stop Watch</h2>
+          <h3 id="stopWatchTitle">0 s</h3>
+
+          <input type="number" id="stopWatchInput" class="timeInput" onchange="preTimeStopWatch()">
+
+          <div class="buttons">
+            <button class="subButton start" onclick="startStopWatch()"><p>Start</p></button>
+            <button class="subButton stop" onclick="stopStopWatch()"><p>Stop</p></button>
+          </div>
+        </div>
+      </div>
+
+
     <script src="./script.js"></script>
   </body>
 </html>
