@@ -13,7 +13,7 @@
         <p>Teste de Document</p>
       </button>
 
-      <button id="eventTestButton" onclick="dropHideEvent(0)">
+      <button id="titleChanger1" onclick="dropHideEvent(0)">
         <p>Title Alter com OnChange</p>
       </button>
 
@@ -22,11 +22,24 @@
         <input
           type="text"
           placeholder="Escreva para alterar o h2 acima"
-          onchange="titleAlter(this)"
+          onchange="titleAlter1(this)"
         />
       </div>
 
-      <button id="MouseTestButton" onclick="dropHideEvent(1)">
+      <button id="titleChanger2" onclick="dropHideEvent(1)">
+        <p>Title Alter com OnKeypress</p>
+      </button>
+
+      <div class="tempEventElement">
+        <h2>Texto Editável pelo input abaixo</h2>
+        <input
+          type="text"
+          placeholder="Escreva para alterar o h2 acima"
+          onkeypress="titleAlter2(this)"
+        />
+      </div>
+
+      <button id="MouseTestButton" onclick="dropHideEvent(2)">
         <p>Eventos de Mouse</p>
       </button>
       
@@ -34,7 +47,7 @@
         <p class="mouseTestText">MouseOver e MouseOut Test</p>
     </div>
 
-    <button id="thisButton" onclick="dropHideEvent(2)">
+    <button id="thisButton" onclick="dropHideEvent(3)">
       <p>Eventos com This </p>
     </button>
 
@@ -44,7 +57,7 @@
       <h4 id="thisH4">Clique Para Ficar itálico</h4>
     </div>
 
-    <button id="parentChildSibling" onclick="dropHideEvent(3)">
+    <button id="parentChildSibling" onclick="dropHideEvent(4)">
       <p>Eventos com Parent, Children e Sibling </p>
     </button>
 
@@ -62,7 +75,7 @@
       </div>
     </div>
 
-      <button id="math" onclick="dropHideEvent(4)">
+      <button id="math" onclick="dropHideEvent(5)">
         <p>Math Box</p>
       </button>
 
@@ -78,7 +91,7 @@
         <p>JSON Test</p>
       </button>
 
-      <button id="inputLocalStorage" onclick="dropHideEvent(5)">
+      <button id="inputLocalStorage" onclick="dropHideEvent(6)">
         <p>Local Storage Input</p>
       </button>
 
@@ -87,7 +100,7 @@
         <input type="text" oninput="update(this)">
       </div>
 
-      <button id="giveAway" onclick="dropHideEvent(6)">
+      <button id="giveAway" onclick="dropHideEvent(7)">
         <p>Sorteio</p>
       </button>
 
@@ -105,7 +118,7 @@
        
       </div>
 
-      <button id="timerBtn" onclick="dropHideEvent(7)">
+      <button id="timerBtn" onclick="dropHideEvent(8)">
         <p>Timer</p>
       </button>
 
@@ -114,7 +127,7 @@
           <h2>Timer</h2>
           <h3 id="timerTitle">0 s</h3>
 
-          <input type="number" id="timerInput" class="timeInput" onchange="preTimeTimer()">
+          <input type="number" id="timerInput" class="timeInput" oninput="preTimeTimer()">
 
           <div class="buttons">
             <button class="subButton start" onclick="startTimer()"><p>Start</p></button>

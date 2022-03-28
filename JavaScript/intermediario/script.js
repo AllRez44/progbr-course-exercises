@@ -1,3 +1,4 @@
+//declaração das variáveis
 tempEE = document.getElementsByClassName('tempEventElement')
 mouseEvent = document.getElementsByClassName('mouseTestText')
 
@@ -49,7 +50,7 @@ function loaded() {
   randomRound.addEventListener('click', mathRandomRound)
   expo.addEventListener('click', mathExpo)
 
-  //Função que deixa a sexta caixa con titulo salvo na memória
+  //Função que deixa a sexta caixa com titulo salvo na memória
   let title = localStorage.getItem('title')
   let h1 = document.getElementById('h1InputLS')
   h1.innerText = title
@@ -86,11 +87,11 @@ function showDocument() {
   //alert(document.body.parentElement.innerHTML)
 }
 
-//Função da primeira box
-function titleAlter(input) {
+//Função Title Alter 1 - onchange
+function titleAlter1(input) {
   // "input" poderia ser qualquer nome, aliás, é uma variável que pega o valor do parâmetro declarado no index.html
-  let h2 = document.getElementsByTagName('h2')[0]
-  h2.innerText = input.value
+  let title1 = document.getElementsByTagName('h2')[0]
+  title1.innerText = input.value
   // ou, se não usasse o argumento para adiantar
   /*
   let input = document.getElementsByTagName('input')[0]
@@ -99,7 +100,13 @@ function titleAlter(input) {
   */
 }
 
-//Funções da segunda box
+//Funções Title Alter 2 - onkeypress
+function titleAlter2(input) {
+  let title2 = document.getElementsByTagName('h2')[1]
+  title2.innerText = input.value
+}
+
+// Função MouseOver & Mouse Out
 function mouseOverText() {
   mouseEvent[0].textContent = 'Mouse is OVER the box'
   mouseEvent[0].style = 'font-weight: bold'
@@ -108,7 +115,7 @@ function mouseOutText() {
   mouseEvent[0].textContent = 'Mouse is OUT of the box'
 }
 
-//Função da terceira box
+//Função do onclick
 document.getElementById('thisH2').onclick = italic
 document.getElementById('thisH3').onclick = italic
 document.getElementById('thisH4').onclick = italic
@@ -117,7 +124,7 @@ function italic() {
   this.style = 'font-style: italic'
 }
 
-//Função da Quarta box
+//Função Parent, Children & Sibling
 function parentChildSibling() {}
 
 function showParent() {
@@ -139,7 +146,7 @@ function showChildren() {
   console.log('Children:', children)
 }
 
-//Função da Quinta box
+//Função Math
 function mathPi() {
   pi.innerText += ' ' + Math.PI
 }
@@ -160,7 +167,7 @@ function mathExpo() {
   expo.innerText += ' 7 ³ é igual à ' + Math.pow(7, 3)
 }
 
-//JSON test
+//Função de JSON
 function json() {
   let a = {
     nome: 'Allan',
@@ -184,7 +191,7 @@ function json() {
   console.log(b2)
 }
 
-//Local Storage Input - Função da Sexta caixa
+//Função Local Storage
 function update(element) {
   let h1 = element.previousElementSibling
   h1.innerText = element.value
@@ -192,7 +199,7 @@ function update(element) {
   localStorage.setItem('title', h1.innerText)
 }
 
-//Local Storage de Qualquer dado
+//Local Storage de Qualquer dado **APENAS NO CÓDIGO
 function localStorageObj() {
   let obj = {
     nome: 'Allan',
@@ -247,6 +254,7 @@ function clearGiveAway() {
 }
 
 //Funções do Timer e Cronômetro
+
 //Função do onchange do pré tempo
 function preTimeTimer() {
   timerNum = document.getElementById('timerInput').value
