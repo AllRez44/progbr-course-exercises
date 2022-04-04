@@ -4,19 +4,29 @@
 //Refrigerante/agua - 1000ml/pessoa. Se evento > 6h, - 1500ml/pessoa
 
 //Criança = 0.5 * adulto - *Desconsiderando cerveja
-function loaded() {
-  let meat = localStorage.getItem('meat')
-  let beer = localStorage.getItem('beer')
-  let soda = localStorage.getItem('soda')
-}
+let meat
+let beer
+let soda
 
 function calc() {
-  let adults = document.getElementById('adultsNum').value
-  let kids = document.getElementById('kidsNum').value
-  let time = document.getElementById('timeNum').value
-  let meat = (adults + kids / 2) * 400
-  let beer = adults * 1200
-  let soda = (adults + kids / 2) * 1000
+  let adults = parseInt(document.getElementById('adultsNum').value)
+  let kids = parseInt(document.getElementById('kidsNum').value)
+  let time = parseFloat(document.getElementById('timeNum').value)
+
+  if (time < 6 && time > 0) {
+    Math.round((meat = (adults + kids / 2) * 400))
+    Math.round((beer = adults * 1200))
+    Math.round((soda = (adults + kids / 2) * 1000))
+  } else if (time >= 6) {
+    Math.round((meat = (adults + kids / 2) * 650))
+    Math.round((beer = adults * 2000))
+    Math.round((soda = (adults + kids / 2) * 1500))
+  } else {
+    meat = undefined
+    beer = undefined
+    soda = undefined
+  }
+
   localStorage.setItem('meat', meat)
   localStorage.setItem('beer', beer)
   localStorage.setItem('soda', soda)
