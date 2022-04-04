@@ -35,8 +35,8 @@ function loaded() {
   }
 
   //Event Listener para associar um evento de mouse à sua função específica
-  tempEE[1].addEventListener('mouseover', mouseOverText)
-  tempEE[1].addEventListener('mouseout', mouseOutText)
+  tempEE[2].addEventListener('mouseover', mouseOverText)
+  tempEE[2].addEventListener('mouseout', mouseOutText)
 
   //Event Listeners da quarta Box
   h1fst.addEventListener('click', showParent)
