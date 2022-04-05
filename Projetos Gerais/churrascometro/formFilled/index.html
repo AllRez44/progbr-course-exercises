@@ -11,9 +11,14 @@
     <div class="background"></div>
     <form action="../index.html" method="get">
       <h1>Churrascômetro</h1>
-      <h3>Carne:</h3>
-      <h3>Cerveja:</h3>
-      <h3>Refrigerange/Água:</h3>
+      <div id="result"></div>
+      <input
+        type="button"
+        value="Valor Exato"
+        class="btn"
+        id="toggleValueBtn"
+        onclick="exactVal()"
+      />
       <input type="submit" value="Voltar" class="btn" />
     </form>
 

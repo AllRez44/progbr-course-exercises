@@ -13,21 +13,41 @@ function calc() {
   let kids = parseInt(document.getElementById('kidsNum').value)
   let time = parseFloat(document.getElementById('timeNum').value)
 
-  if (time < 6 && time > 0) {
-    Math.round((meat = (adults + kids / 2) * 400))
-    Math.round((beer = adults * 1200))
-    Math.round((soda = (adults + kids / 2) * 1000))
-  } else if (time >= 6) {
-    Math.round((meat = (adults + kids / 2) * 650))
-    Math.round((beer = adults * 2000))
-    Math.round((soda = (adults + kids / 2) * 1500))
-  } else {
-    meat = undefined
-    beer = undefined
-    soda = undefined
-  }
+  meat = meatFun(time) * adults + (meatFun(time) * kids) / 2
+  beer = beerFun(time) * adults
+  soda = sodaFun(time) * adults + (sodaFun(time) * kids) / 2
 
   localStorage.setItem('meat', meat)
   localStorage.setItem('beer', beer)
   localStorage.setItem('soda', soda)
+}
+
+function meatFun(time) {
+  if (time < 6 && time > 0) {
+    return 400
+  } else if (time >= 6) {
+    return 650
+  } else {
+    return undefined
+  }
+}
+
+function beerFun(time) {
+  if (time < 6 && time > 0) {
+    return 1200
+  } else if (time >= 6) {
+    return 2000
+  } else {
+    return undefined
+  }
+}
+
+function sodaFun(time) {
+  if (time < 6 && time > 0) {
+    return 1000
+  } else if (time >= 6) {
+    return 1500
+  } else {
+    return undefined
+  }
 }
