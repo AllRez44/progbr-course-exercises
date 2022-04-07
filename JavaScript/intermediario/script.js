@@ -143,7 +143,7 @@ function showChildren() {
     children += ' ' + h1trd.children[i].innerText
   }
 
-  console.log('Children:', children)
+  console('Children:', children)
 }
 
 //Função Math
@@ -272,6 +272,10 @@ function stopWatchFun() {
 
 function startStopWatch() {
   stopWatch = setInterval(stopWatchFun, 1000)
+}
+
+function pauseStopWatch() {
+  clearInterval(stopWatch)
 }
 
 function stopStopWatch() {

@@ -84,7 +84,7 @@ input {
 .buttons {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1.3rem;
 }
 
 .subButton {
@@ -109,8 +109,9 @@ input {
 .timerStopWatch {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  padding: 2rem 4rem 1rem 3rem;
+  gap: 2.5rem;
+  padding: 2rem 1rem 1rem 1rem;
+  width: auto;
 }
 
 .timerBox {
@@ -125,7 +126,7 @@ input {
 }
 
 .timeInput {
-  width: 2.5rem;
+  width: 2.8rem;
   align-self: flex-end;
   background-color: rgb(172, 204, 193);
   border-radius: 0.5rem;
@@ -136,8 +137,9 @@ input {
 }
 
 .start,
-.stop {
-  padding: 0.4rem 0.75rem;
+.stop,
+.pause {
+  padding: 0.3rem 0.75rem;
   color: black;
   border-width: 1px;
 }
@@ -145,6 +147,11 @@ input {
 .start {
   background-color: rgba(70, 139, 204, 0.767);
   color: rgb(255, 245, 245);
+}
+
+.pause {
+  background-color: rgba(198, 201, 23, 0.932);
+  color: rgb(245, 245, 245);
 }
 
 .stop {
