@@ -2,8 +2,9 @@
 //Carne - 400g/pessoa.   Se evento > de 6h, - 650g/pessoa
 //Cerveja - 1200ml/pessoa. Se event > 6h, - 2000ml/pessoa
 //Refrigerante/agua - 1000ml/pessoa. Se evento > 6h, - 1500ml/pessoa
-
 //Criança = 0.5 * adulto - *Desconsiderando cerveja
+
+//Var declare
 let meatQnt = localStorage.getItem('meat')
 let beerQnt = localStorage.getItem('beer')
 let sodaQnt = localStorage.getItem('soda')
@@ -24,6 +25,8 @@ function loaded() {
     result.innerHTML += '<p> *Mala = 15 unidades de 269mL'
     result.innerHTML += '<p> *Lata = 1 unidade de 350mL'
   }
+
+  //V1 is the aproximate amount of items
 
   function meatTotalV1(meat) {
     meat = Math.ceil(meat)
@@ -61,7 +64,7 @@ function loaded() {
   function sodaTotalV1(soda) {
     if (soda > 1500 && Math.ceil(soda / 1000) % 2 == 0) {
       return `${Math.ceil(soda / 2000)} Garrafas de 2 L`
-    } else if (soda > 1500 && Math.ceil(soda) % 2 > 0) {
+    } else if (soda > 1500 && Math.ceil(soda / 1000) % 2 > 0) {
       return `${Math.floor(soda / 2000)} Garrafas de 2 L + 1 de 1 L`
     } else if (soda > 1000 && soda <= 1500) {
       return '1 Garrafa de 1.5 L'
@@ -79,6 +82,8 @@ function exactVal() {
   toggle.value = 'Quantidade Aproximada'
   toggle.onclick = reload
 }
+
+//V1 is the exact amount of items
 
 function meatTotalV2(meat) {
   if (meat >= 1000) {
