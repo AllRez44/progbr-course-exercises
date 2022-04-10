@@ -52,4 +52,4 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 
 ### Intermediário
 
-[Window, Document, DOM, Events, This, Element: Parent, Children and Siblings, Math, JSON, Local Storage, Timeout & Interval ](https://allrez44.github.io/progbr-course-exercises/JavaScript/intermediario/index.html)
+[Window, Document, DOM, Events, This, Element: Parent, Children and Siblings, Math, JSON, Local Storage, Timeout & Interval](https://allrez44.github.io/progbr-course-exercises/JavaScript/intermediario/index.html)
