@@ -4,14 +4,64 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/3db3686a09.js" crossorigin="anonymous"></script>
     <title>HTML Avançado</title>
   </head>
   <body>
-    <header>HTML Avançado</header>
+    <header>
+      <h1>HTML Avançado</h1>
+    </header>
     <main>
       <h2>Lista com Letras do Alfabeto baseadas no atributo personalizado</h2>
       <div id="list" num="10"></div>
+
+      <hr />
+
+      <div id="videoContainer1" class="videoContainer">
+        <h2>The Batman - Trailer Dublado (Teste da Tag HTML "Video")</h2>
+        <video 
+          id="theBatman"
+          src="./assets/the_batman_trailer.mp4"
+          width="500px"
+          controls
+          poster="./assets/the_batman_trailer_thumb.jpg"
+          preload="metadata"</div>
+        ></video>
+      </div>
+
+      <hr />
+
+      <div id="videoContainer2" class="videoContainer">
+        <h2>Duna - Trailer Dublado (Teste da Tag HTML "Video" + JS) </h2>
+
+        <div class="video" id="duneContainer">
+          <video id="dune" src="./assets/duna_trailer.mp4" poster="./assets/duna_trailer_thumb.jpeg" width="500px" ended></video>
+        </div>
+
+        <div class="videoControls">
+          <i onclick="playVid()" class="fa-solid fa-play" id="playBtn"></i>
+          <i onclick="pauseVid()" class="fa-solid fa-pause" id="pauseBtn"></i>
+          <i onclick="stopVid()" class="fa-solid fa-stop"></i>
+          <div class="foward">
+            <i onclick="foward()" class="fa-solid fa-rotate-right"></i>
+            <p>10</p>
+          </div>
+          <div class="backward">
+            <i onclick="backward()" class="fa-solid fa-rotate-left"></i>
+            <p>10</p>
+          </div>
+          <div class="speed">
+            <i onclick="speedDown()" class="fa-solid fa-backward"></i>
+            <p id="speedVid">Speed (1.0x)</p>
+            <i onclick="speedUp()" class="fa-solid fa-forward"></i>
+          </div>
+          
+          <i onclick="fullScreen()" class="fa-solid fa-expand"></i>
+        </div>
+        
+      </div>
     </main>
     <script src="./script.js"></script>
+    
   </body>
 </html>
