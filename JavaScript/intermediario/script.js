@@ -2,9 +2,9 @@
 tempEE = document.getElementsByClassName('tempEventElement')
 mouseEvent = document.getElementsByClassName('mouseTestText')
 
-h1fst = document.getElementById('first')
-h1scd = document.getElementById('second')
-h1trd = document.getElementById('third')
+h1Fst = document.getElementById('first')
+h1Scd = document.getElementById('second')
+h1Trd = document.getElementById('third')
 
 pi = document.getElementById('pi')
 e = document.getElementById('e')
@@ -39,9 +39,9 @@ function loaded() {
   tempEE[2].addEventListener('mouseout', mouseOutText)
 
   //Event Listeners da quarta Box
-  h1fst.addEventListener('click', showParent)
-  h1scd.addEventListener('click', showSibling)
-  h1trd.addEventListener('click', showChildren)
+  h1Fst.addEventListener('click', showParent)
+  h1Scd.addEventListener('click', showSibling)
+  h1Trd.addEventListener('click', showChildren)
 
   //Event Listeners da Quinta Box
   pi.addEventListener('click', mathPi)
@@ -128,19 +128,19 @@ function italic() {
 function parentChildSibling() {}
 
 function showParent() {
-  console.log('Parent:', h1fst.parentElement.id)
+  console.log('Parent:', h1Fst.parentElement.id)
 }
 
 function showSibling() {
   var sibling = ''
-  sibling = h1scd.previousElementSibling.textContent
+  sibling = h1Scd.previousElementSibling.textContent
   console.log('Siblinf:', sibling)
 }
 
 function showChildren() {
   var children = ''
-  for (i = 0; i < h1trd.children.length; i++) {
-    children += ' ' + h1trd.children[i].innerText
+  for (i = 0; i < h1Trd.children.length; i++) {
+    children += ' ' + rd.children[i].innerText
   }
 
   console('Children:', children)
