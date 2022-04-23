@@ -68,7 +68,9 @@ function speedDown() {
   speedMeter.innerHTML = `speed (${dune.playbackRate}x)`
 }
 
-function fullScreen() {}
+function fullScreen() {
+  dune.webkitEnterFullscreen()
+}
 
 //Função Mouse in e Mouse out
 function hideTimer() {

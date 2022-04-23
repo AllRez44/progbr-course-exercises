@@ -84,43 +84,36 @@ h2{
 }
 
 i, .videoControls p{
-  top:6px;
   position: relative;
   cursor: pointer;
-  font-size: 22px;
-  margin: 0 1px 0 ;
+  font-size: 26px;
   padding: 0 15px 0;
   color: aliceblue;
-}
-
-.videoControls p{
-  font-size: 10px;
-  display: inline-block;
-  top: 3px
 }
 
 #pauseBtn{
   display: none;
 }
 
-.foward, .backward{
+.forward, .backward{
   display: inline-block;
   position: relative;
 }
 
-.foward p, .backward p{
+.forward p, .backward p{
   position: absolute;
   z-index:10;
-  top: 269px;
-  left: 23px;
+  top: 18px;
+  left: 8px;
   transform: translateY(-100%);
   color: aliceblue;
   font-size: 8px;
   font-weight: 700;
 }
 
-.foward i, .backward i{
-  position: relative;
-  z-index: 8;
+#speedVid{
+  display: inline-block;
+  font-size: 10px;
+  top:-5px;
+  cursor:default;
 }
-
