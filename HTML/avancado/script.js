@@ -20,25 +20,34 @@ let timer
 let speedMeter = document.getElementById('speedVid')
 
 dune.onclick = () => {
-  if (dune.paused) {
+  if (dune.paused && !dune.webkitDisplayingFullscreen) {
     playVid()
-  } else pauseVid()
+  } else if (!dune.paused && !dune.webkitDisplayingFullscreen) {
+    pauseVid()
+  }
 }
 
 function playVid() {
   dune.play()
-  playBtn.style.display = 'none'
-  pauseBtn.style.display = 'inline-block'
   dune.addEventListener('mouseout', hideTimer)
   controls.addEventListener('mouseout', hideTimer)
 }
 
+dune.onplaying = () => {
+  playBtn.style.display = 'none'
+  pauseBtn.style.display = 'inline-block'
+}
+
 function pauseVid() {
   dune.pause()
-  pauseBtn.style.display = 'none'
-  playBtn.style.display = 'inline-block'
+
   dune.removeEventListener('mouseout', hideTimer)
   controls.removeEventListener('mouseout', hideTimer)
+}
+
+dune.onpause = () => {
+  pauseBtn.style.display = 'none'
+  playBtn.style.display = 'inline-block'
 }
 
 function stopVid() {
