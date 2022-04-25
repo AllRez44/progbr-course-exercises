@@ -83,7 +83,7 @@ function fullScreen() {
 
 //Função Mouse in e Mouse out
 function hideTimer() {
-  timer = setTimeout(hideVid, 2000)
+  timer = setTimeout(hideVid, 800)
 }
 
 function hideVid() {
