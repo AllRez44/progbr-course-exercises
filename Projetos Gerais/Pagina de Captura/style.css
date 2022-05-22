@@ -118,6 +118,8 @@ footer {
   main {
     background: url(images/people.jpg) center/cover;
     padding: 2rem 1rem 4rem;
+    display: flex;
+    justify-content: center;
   }
 
   form p,
@@ -152,8 +154,13 @@ footer {
     font-size: 2rem;
   }
 
+  main{
+    display: flex;
+    justify-content: center;
+  }
+
   form {
-    max-width: 290px;
+    max-width: 360px;
   }
 
   form .formTitle {
