@@ -50,7 +50,6 @@ h2{
 }
 
 #videoContainer2{
-  height: 280px;
   padding-top: 0;
 }
 
@@ -116,4 +115,52 @@ i, .videoControls p{
   font-size: 10px;
   top:-5px;
   cursor:default;
+}
+
+.canvasDiv{
+  margin: 1rem 0 1rem;
+  padding: 0;
+  height: 300px;
+  width: 500px;
+  background-color:aqua;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvasDiv p{
+  text-align: center;
+  position: relative;
+  font-size:24px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#movingBox{
+  position: absolute; 
+  top: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rebeccapurple;
+}
+
+#canvas1{
+  background-color: rgb(244, 178, 250);
+  border: 2px solid gray;
+}
+
+#canvas2{
+  background-color: cadetblue;
+}
+
+#canvas3{
+  background-color: coral;
+}
+
+#canvas4{
+  background-color: chocolate;
+}
+
+#canvas5{
+  background-color: chartreuse;
 }

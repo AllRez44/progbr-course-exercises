@@ -1,0 +1,278 @@
+:root{
+    --mainPColor: green;
+}
+
+h2::first-letter{
+    color:red;
+    font-size: 3rem
+} 
+
+.text::first-line{
+    color: blue;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li::before, li::after{
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(./assets/g-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 3px;
+}
+ 
+p::selection{       /* Muda como o conteúdo fica quando é selecionada uma área */  
+    background-color: gold;
+    color: orangered
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+input:focus{
+    color: red;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+
+[title='secondList'] li:nth-of-type(even){
+    background-color: beige;
+}
+
+[title='secondList']  li:nth-last-of-type(odd){
+    background-color: gray;
+    color: white;
+}
+
+[title='secondList'] li::before, [title='secondList'] li::after{
+    background-image: none;
+} 
+
+.transform{
+    width: 400px;
+    height: 300px;
+    background-color: red;
+    transform: skew(30deg,145deg) scale(0.6,0.8);
+    /*  Skew: Primeiro angulo modifica no eixo x e o segundo o eixo y.*/
+    /* Scale: Primeiro valor altera a escala da largura e o segundo da altura*/
+}
+
+.p1{
+    color: var(--mainPColor);
+    font-size: 16px;
+}
+
+.p2{
+    color: var(--mainPColor);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.p4{
+    color: var(--mainPColor);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+[class^='container']{
+    display: flex;
+    background-color: darkgray;
+    height: 200px;
+    color: white;
+}
+
+.container1{
+    flex-direction: row-reverse;
+    margin-bottom: 1rem;
+}
+
+.container2{
+    flex-direction: column-reverse;
+}
+
+.box1{
+    background-color: red;
+}
+
+.box2{
+    background-color: blue;
+
+}
+
+.box3{
+    background-color: green;
+}
+
+.box4{
+    background-color: purple;
+}
+
+.box5{
+    background-color:coral;
+}
+
+.box6{
+    background-color:chartreuse;
+}
+
+
+[class^='box']{
+    width: 50px;
+    height: 50px;
+}
+
+.container3{
+    flex-direction: column;
+    flex-wrap: wrap; /* Manda para a linha de baixo (ou para a coluna à direita) ao invés de ajustar o tamanho para caber no espaço do pai. Ele mantém o tamanho fixo dos elementos*/
+}
+
+.container3 *, .container4 *{
+    width: 100px;
+    height: 80px;    
+}
+
+.container4{
+    flex-flow: column-reverse wrap-reverse; /* Basicamente permite juntar o "direction" com o "wrap" numa linha só*/
+}
+
+.container5{
+    display: grid;
+    grid-template-rows: 35% auto; /* Primeiro valor 35% do espaço e segundo valor é o resto do espaço */
+    grid-template-columns: 100px 2fr 1fr; /* Primeiro valor fixo em pixels, segundo valor 2/3 do restante do espaço e terceiro valor 1/3 do espaço restante */
+    /*também poderia ser = grid-template: 30% auto / 100px 2fr 1fr */
+    column-gap: 30px;
+    row-gap: 15px;
+    
+    padding: 1rem;
+    background-color: rgb(5, 30, 53);
+    margin-bottom: 2rem;
+}
+
+.container5 *{
+    width: auto;
+    height: auto;
+}
+
+.container6{
+    display: grid;
+    grid-template: auto auto / auto auto auto ;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(5,30,53);
+    height: 400px;
+}
+
+.container6 *{
+    width: 120px;
+    height: 120px;
+}
+
+/* Grid Template Area */
+
+.gridArea{
+    display: grid;
+    padding: 10px;
+    background-color: grey;
+    grid-template-areas: "b1 b1 b1 b1"
+                         "b2 b2 b3 b3"
+                         "b6 b6 b4 b5"
+}
+
+.gridArea *{
+    padding: 2rem;
+}
+
+.item1{
+    grid-area: b1;
+    background-color: red;
+}
+
+.item2{
+    grid-area: b2;
+    background-color: blue;
+}
+
+.item3{
+    grid-area: b3;
+    background-color: green;
+}
+
+.item4{
+    grid-area: b4;
+    background-color: purple;
+}
+
+.item5{
+    grid-area: b5;
+    background-color: coral;
+}
+
+.item6{
+    grid-area: b6;
+    background-color: chartreuse;
+}
+
+/* Grid Column e Row - Start e End */
+
+.gridStartEnd{
+    display: grid;
+    grid-template: auto auto auto / auto auto auto auto;
+    padding: 10px;
+    background-color: gray;
+}
+
+.gridStartEnd *{
+    padding: 2rem;
+}
+
+.grid1{
+    background-color: red;
+    grid-column-end: span 4;
+}
+
+.grid2{
+    background-color: blue;
+    grid-row-start: 2;
+    grid-column-end: span 2;
+}
+
+.grid3{
+    background-color: green;
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: span 2;
+}
+
+.grid4{
+    background-color: purple;
+    grid-row-start: 3;
+}
+
+.grid5{
+    background-color: coral;
+    grid-row-start: 3;
+}
+
+.grid6{
+    background-color: chartreuse;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
