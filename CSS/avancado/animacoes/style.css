@@ -1,0 +1,52 @@
+:root{
+    color: rgb(24, 24, 24);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes changeColor1{
+    from{ background-color: blue}
+    to{background-color: red}
+}
+
+@keyframes changeColor2{
+    0%{ background-color: blue}
+    25%{background-color: yellow; width: 400px; height: 400px;}
+    75%{background-color: orange ; width: 200px;}
+    100%{background-color: red; height: 200px;}
+    
+}
+
+h1{
+    position: relative;
+    top: 2rem;
+    font-size: 42px;
+    text-align: center;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box1{
+    width: 200px;
+    height: 200px;
+    border: #000000 solid 2px;
+    animation-name: changeColor1;
+    animation-duration: 3s;
+    margin-bottom: 2rem;
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    border: #000000 solid 2px;
+    animation-name: changeColor2;
+    animation-duration: 6s;
+}
