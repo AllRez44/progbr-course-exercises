@@ -45,6 +45,11 @@ Curso Desenvolvimento Web Full Stack - Programador Br | https://programadorbr.co
 [Media Queries](https://allrez44.github.io/progbr-course-exercises/CSS/intermediario/media%20queries/index.html)  
 [Canvas - Positions class](https://allrez44.github.io/progbr-course-exercises/CSS/intermediario/quadro%20-%20aula%20de%20positions/quadro.html)
 
+### Avançado
+
+[CSS Advanced](https://allrez44.github.io/progbr-course-exercises/CSS/avancado/index.html)
+[CSS Animations](https://allrez44.github.io/progbr-course-exercises/CSS/avancado/animations/index.html)
+
 ---
 
 ## JavaScript
