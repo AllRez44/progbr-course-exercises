@@ -16,6 +16,26 @@
     
 }
 
+@keyframes changeColor3{
+    0%{ background-color: blue}
+    25%{background-color: yellow; width: 400px; height: 160px;}
+    75%{background-color: orange ; width: 200px;}
+    100%{background-color: red; height: 80px;}
+}
+
+@keyframes changeColor4{
+    0%{ background-color: blue}
+    25%{background-color: yellow; width: 400px;}
+    75%{background-color: orange ; width: 200px;}
+    100%{background-color: red;}
+}
+
+@keyframes move{
+    from{ left: 0; background-color: whitesmoke;}
+    to{left: 400px; background-color: rgb(70, 70, 73);}
+}
+
+
 h1{
     position: relative;
     top: 2rem;
@@ -28,25 +48,126 @@ h1{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
 
-.box1{
+.box{
+    position: relative;
     width: 200px;
-    height: 200px;
+    height: 80px;
     border: #000000 solid 2px;
-    animation-name: changeColor1;
-    animation-duration: 3s;
     margin-bottom: 2rem;
 }
 
-.box2{
-    width: 200px;
-    height: 200px;
-    border: #000000 solid 2px;
+#b1{
+    animation-name: changeColor1;
+    animation-duration: 3s;
+}
+
+
+
+#b2{
     animation-name: changeColor2;
     animation-duration: 6s;
+}
+
+#b3{
+    animation-name: changeColor3;
+    animation-duration: 6s;
+    animation-delay: -3s; /* Tempo negativo então vai começar como se já tivessem passado 3s */
+}
+
+#b4{
+    animation-name: changeColor4;
+    animation-duration: 8s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+#b5{
+    animation-name: changeColor4;
+    animation-duration: 4s;
+    animation-iteration-count: 4;
+    animation-direction:alternate;
+}
+
+#b6{
+    animation-name: changeColor2;
+    animation-direction: reverse;
+    animation-fill-mode: both; /* O estado inicial já pega o estudo do primeiro frame da animação e o estado final mantém o estilo do último frame */
+    animation-duration: 5s;
+}
+
+#b7{
+    animation-name: move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#b8{
+    animation-name: move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+#b9{
+    animation-name: move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+#b10{
+    animation-name: move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+#b11{
+    animation-name: move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#b12{
+    animation-name: move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function:step-start;
+}
+
+
+#b13{
+    animation-name: move;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function:step-end;
+}
+
+#b14{
+    animation: changeColor2 2 4s ease 0s 2  reverse;
+}
+
+.button{
+    display: inline-block;
+    font-size: 30px;
+    padding: 20px 30px;
+    background-color: rgb(44, 44, 160);
+    color: white;
+    transition: background-color, padding; /* poderia escrever "all" que iria já pegar todas as propriedades que mudaram. */
+    transition-duration: 300ms;
+}
+
+.button:hover{
+    background-color: rgb(68, 68, 185);
+    padding: 30px 45px;
+    color: rgb(209, 207, 207);
 }
