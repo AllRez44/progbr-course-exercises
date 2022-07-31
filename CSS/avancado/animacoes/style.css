@@ -98,7 +98,7 @@ h1{
 #b6{
     animation-name: changeColor2;
     animation-direction: reverse;
-    animation-fill-mode: both; /* O estado inicial já pega o estudo do primeiro frame da animação e o estado final mantém o estilo do último frame */
+    animation-fill-mode: both; /* O estado inicial já pega o estado do primeiro frame da animação e o estado final mantém o estilo do último frame */
     animation-duration: 5s;
 }
 
