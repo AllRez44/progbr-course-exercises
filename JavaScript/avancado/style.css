@@ -3,8 +3,47 @@
     padding: 0;
     color: rgb(12, 12, 12);
     font-family: Arial, Helvetica, sans-serif;
+    --border-color: rgba(0, 0, 0, 0.438);
+}
+
+html{
+    background-color: aliceblue;
+}
+
+body{
+    max-width: 100vw;
+    min-height: calc(100vh - 16px - 16px);
+    padding: 1rem 2rem 0;
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    flex: 1;
 }
 
 h1{
     text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    flex: 8;
+}
+
+section{
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.2rem 0 0.5rem;
+}
+
+
+
+footer{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
